@@ -1,0 +1,89 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('./img/images.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.title {
+  font-size: 3rem;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+.text {
+  position: absolute;
+  cursor: pointer;
+}
+.text span {
+  position: absolute;
+  background-color: rgb(255, 0, 0);
+  transition: 0.5s;
+}
+.horizontal {
+  width: 100%;
+  height: 5px;
+}
+.horizontal.first {
+  top: 0;
+  left: 0;
+}
+.horizontal.second {
+  right: 0;
+  bottom: 0;
+}
+.text:hover .horizontal.first {
+  width: 0px;
+  transform: translateX (-1000px);
+}
+.text:hover .horizontal.second {
+  width: 0px;
+  transform: translateX (1000px);
+}
+.vertical {
+  height: 0%;
+  width: 6px;
+}
+.vertical.first {
+  top: 0;
+  left: 0;
+  transform: translate(-0.75rem, -1000px);
+}
+.vertical.second {
+  right: 0;
+  bottom: 0;
+  transform: translateX(0.75rem, 1000px);
+}
+.text:hover .vertical.first {
+    height: 100%;
+    transform: translate(-0.75rem, 0px);
+    background-color: blue;
+}
+.text:hover .vertical.second {
+  height: 100%;
+  transform: translate(0.75rem, 0px);
+  background-color: blue;
+}
